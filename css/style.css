@@ -552,6 +552,12 @@ button:focus {
   height: auto;
 }
 
+@media all and (max-width: 1366px) {
+	.variant {
+		background-image: url(../img/infograph1366х768.jpg);
+	}
+}
+
 /* ============== КАК ВЫБРАТЬ ================== */
 
 .howTo {
