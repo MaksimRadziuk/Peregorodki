@@ -551,7 +551,16 @@ button:focus {
 .variant .container {
   height: auto;
 }
-
+@media all and (max-width: 1545px) {
+	.variant .container>h2 {
+		margin-top: 60px;
+	}
+}
+@media all and (max-width: 1380px) {
+	.variant .container>h2 {
+		margin-top: 40px;
+	}
+}
 @media all and (max-width: 1366px) {
 	.variant {
 		background-image: url(../img/infograph1366х768.jpg);
