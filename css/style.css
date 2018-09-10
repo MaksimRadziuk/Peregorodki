@@ -78,6 +78,43 @@ ul:focus {
   height: 100%;
   float: none;
 }
+.container>h2 {
+  margin-top: 90px;
+  margin-bottom: 60px;
+  font-size: 30px;
+  color: #36353a;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+}
+@media all and (max-width:1380px) {
+	.container>h2 {
+		margin-top: 70px;
+	}
+}
+@media all and (max-width:1320px) {
+  .container {
+    width: 1080px;
+  }
+  .container>h2 {
+    font-size: 28px;
+  }
+}
+@media all and (max-width:1120px) {
+  .container {
+    width:780px;
+  }
+  .container>h2 {
+    font-size: 24px;
+    margin-top: 60px;
+  }
+}
+@media all and (max-width:980px) {
+  .container>h2 {
+    font-size: 22px;
+  }
+}
+
 
 /* ======================================= */
 
@@ -199,6 +236,44 @@ header .topbar li:nth-child(8):hover {
 header .topbar li:nth-child(1):hover a,
 header .topbar li:nth-child(8):hover a {
   font-weight: 400;
+}
+
+@media all and (max-width:1320px) {
+  header .topbar li:last-child a {
+    font-size: 16px;
+  }
+  header .topbar li a {
+    font-size: 12px;
+  }
+  .logo_wrap {
+    width: 100%;
+  }
+  .logo_wrap img{
+    width: 100%;
+  }
+}
+@media all and (max-width:1120px) {
+  header .topbar li a {
+    font-size: 10px;
+    line-height: 60px;
+  }
+  header .topbar li:last-child a {
+    font-size: 10px;
+  }
+  header .topbar li:last-child a span:first-child {
+    margin-right: 0px;
+    padding-top: 12px;
+  }
+  header .topbar li:last-child a span:first-child>img {
+    width: 70%;
+  }
+  header .topbar {
+    height: 60px;
+  }
+  .logo_wrap img {
+    width: 95%;
+  }
+
 }
 
 /* ======== */
@@ -402,6 +477,7 @@ button:focus {
     min-height: 370px;
   }
 }
+
 @media all and (max-width:1400px) {
   header .firstScreen .action_box p {
     font-size: 20px;
@@ -418,6 +494,71 @@ button:focus {
   }
   header .firstScreen .description {
     font-size: 22px;
+  }
+}
+@media all and (max-height:630px) {
+  header .firstScreen h1 {
+    margin-top: 4vh;
+  }
+  header .firstScreen h1 {
+    font-size: 24px;
+  }
+  header .firstScreen h1 span {
+    font-size: 34px;
+  }
+  header .firstScreen h1 {
+    margin-bottom: 0;
+  }
+  header .firstScreen .description {
+    font-size: 18px;
+  }
+  header .firstScreen .action_box {
+    min-height: 320px;
+    padding: 0 20px;
+  }
+  header .firstScreen .action_box h2 {
+    margin-bottom: 0;
+    margin-top: 20px;
+    font-size: 32px;
+  }
+  header .firstScreen .action_box p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  header .firstScreen .action_box form .input_wrap input {
+    height: 40px;
+  }
+  header .firstScreen .action_box form input[type='checkbox'] + label {
+    font-size: 12px;
+    padding-left: 40px;
+  }
+  header .firstScreen .action_box form input[type='checkbox'] + label:before {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media all and (max-width:1120px) {
+  header .firstScreen {
+    height: calc(100vh - 60px);
+  }
+  button {
+    width: 270px;
+  }
+}
+@media all and (max-width:940px) {
+  header .firstScreen .action_box form input[type='checkbox'] + label {
+    margin-bottom: 10px;
+  }
+  header .firstScreen .action_box p {
+    font-size: 16px;
+  }
+  button {
+    width: 240px;
+    font-size: 14px;
+  }
+  header .firstScreen .action_box form .input_wrap input {
+    padding-left: 10px;
   }
 }
 
@@ -495,6 +636,19 @@ button:focus {
     font-size: 12px;
   }
 }
+@media all and (max-width:1000px) {
+  .adv_block .icon_wrap {
+    margin: 15px auto;
+  }
+}
+@media all and (max-width:970px) {
+  .adv_block p {
+    font-size: 10px;
+  }
+  .adv_block {
+    padding: 0 10px;
+  }
+}
 
 
 /* ============== ЗАКАЖИТЕ ЕСЛИ ================= */
@@ -502,15 +656,6 @@ button:focus {
 .orderIf {
   width: 100%;
   padding-bottom: 30px;
-}
-.container>h2 {
-  margin-top: 90px;
-  margin-bottom: 60px;
-  font-size: 30px;
-  color: #36353a;
-  text-transform: uppercase;
-  font-weight: 400;
-  text-align: center;
 }
 .orderIf_block {
   width: 23%;
@@ -537,6 +682,26 @@ button:focus {
   margin-bottom: 0;
 }
 
+@media all and (max-width:1320px) {
+  .orderIf_block .img_wrap {
+    height: 250px;
+  }
+}
+@media all and (max-width:1120px) {
+  .orderIf_block .img_wrap {
+    height: 180px;
+  }
+  .orderIf_block p {
+    font-size: 12px;
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+  .orderIf_block {
+    margin-bottom: 30px;
+    height: 240px;
+  }
+}
+
 /* ============== ВАРИАНТЫ ================== */
 
 .variant {
@@ -551,20 +716,24 @@ button:focus {
 .variant .container {
   height: auto;
 }
-@media all and (max-width: 1545px) {
-	.variant .container>h2 {
-		margin-top: 60px;
-	}
+@media all and (max-width:1320px) {
+  .variant .container>h2 {
+    margin-top: 50px;
+  }
 }
-@media all and (max-width: 1380px) {
-	.variant .container>h2 {
-		margin-top: 40px;
-	}
+@media all and (max-width:1024px) {
+  .variant {
+    background-image: url(../img/infograph1024х600.jpg);
+  }
+  .variant .container>h2 {
+    margin-top: 30px;
+  }
 }
-@media all and (max-width: 1366px) {
-	.variant {
-		background-image: url(../img/infograph1366х768.jpg);
-	}
+@media all and (max-width:890px) {
+  .variant .container>h2 {
+    margin-top: 20px;
+    font-size: 20px;
+  }
 }
 
 /* ============== КАК ВЫБРАТЬ ================== */
@@ -660,6 +829,48 @@ button:focus {
   background-image: url(../img/checked.png);
 }
 
+@media all and (max-width:1320px) {
+  .howTo .form_box p.description,
+  .howTo .form_box form input[type='checkbox'] + label {
+    font-size: 14px;
+  }
+  .howTo .form_box h2 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+}
+@media all and (max-width:1120px) {
+  .howTo .form_box {
+    padding: 0 20px;
+  }
+  .howTo .form_box h2 {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+  .howTo .form_box p.description,
+  .howTo .form_box form input[type='checkbox'] + label {
+    font-size: 12px;
+  }
+  .howTo .form_box p.description {
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .howTo .form_box .input_wrap input {
+    height: 40px;
+  }
+  .howTo .form_box form input[type='checkbox'] + label {
+    padding-left: 40px;
+    margin-bottom: 20px;
+  }
+  .howTo .form_box form input[type='checkbox'] + label:before {
+    width: 20px;
+    height: 20px;
+  }
+  .howTo .form_box form {
+    padding-bottom: 50px;
+  }
+}
+
 /* =============== ВЫБРАТЬ ПЕРЕГОРОДКИ =================== */
 
 .choose {
@@ -752,6 +963,34 @@ button:focus {
 .tile_wrap .tile:nth-child(3) .tile_overlay .price,
 .tile_wrap .tile:nth-child(5) .tile_overlay .price{
   color: #383840;
+}
+
+@media all and (max-width:1200px) {
+  .tile_wrap .tile .tile_overlay .title {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  .tile_wrap .tile .tile_overlay {
+    padding: 30px;
+  }
+  .tile_wrap .tile .tile_overlay .price {
+    font-size: 30px;
+  }
+}
+@media all and (max-width:960px) {
+  .tile_wrap .tile .tile_overlay .price {
+    margin-bottom: 10px;
+  }
+  .tile_wrap .tile .tile_overlay .title {
+    font-size: 16px;
+  }
+  .tile_wrap .tile .tile_overlay .price {
+    font-size: 24px;
+  }
+  .tile_wrap .tile .tile_overlay button {
+    height: 40px;
+    font-size: 14px;
+  }
 }
 
 /* ================ КАЛЬКУЛЯТОР ================== */
@@ -1210,6 +1449,171 @@ select:focus, select:hover {
   margin-right: 10px;
 }
 
+@media all and (max-width:1320px) {
+  .calculator .calc_slider {
+    width: 820px;
+  }
+  .calculator .callback_block {
+    width: 260px;
+  }
+  .calculator .callback_block a {
+    font-size: 18px;
+  }
+  .calculator .callback_block {
+    padding: 30px 15px;
+  }
+  .calculator .callback_block .title,
+  .calculator .callback_block p {
+    font-size: 16px;
+  }
+  .calculator .calc_slide.first .form_wrap form table tr td,
+  .calculator .calc_slide.first .form_wrap form table tr td.nobb {
+    font-size: 16px;
+  }
+  .calculator .calc_slide.second .leftPart {
+    width: 490px;
+  }
+  .calculator .form_wrap {
+    padding-right: 50px;
+  }
+  .calculator .calc_slide.third .tab_content_wrap .tab_content .img_part {
+    margin-right: 90px;
+  }
+  .calculator .calc_slide.third .tab_content_wrap .tab_content .select_part .select_wrap:before {
+    width: 150px;
+    left: -150px;
+  }
+  .calculator .calc_slide .title>span.floatRight {
+    margin-right: 75px;
+  }
+  .calculator .scale_block {
+    width: 180px;
+    height: 110px;
+  }
+  .calculator .scale_block.short {
+    width: 160px;
+  }
+  .calculator .scale_block:first-child p {
+    left: 46%;
+  }
+  .calculator .scale_block .quad {
+    left: 60px;
+  }
+  .calculator .scale_block:first-child .quad {
+    left: 90px;
+  }
+  .calculator .scale_block p {
+    left: 30%;
+  }
+  .calculator .calc_box {
+    margin-top: 40px;
+  }
+  .calculator .controls_wrap {
+    margin-top: 20px;
+  }
+}
+@media all and (max-width:1120px) {
+  .calculator .calc_slider {
+    width: 600px;
+  }
+  .calculator .callback_block {
+    width: 180px;
+  }
+  .calculator input[type='radio'] + label {
+    padding-left: 25px;
+    font-size: 14px;
+  }
+  .calculator input[type='radio'] + label:before {
+    width: 15px;
+    min-width: 15px;
+    height: 15px;
+  }
+  .calculator .calc_slide.first .form_wrap form table tr td,
+  .calculator .calc_slide.first .form_wrap form table tr td.nobb {
+    font-size: 14px;
+  }
+  .calculator .controls_wrap button {
+    width: 200px;
+  }
+  .calculator .calc_slide.second .rightPart {
+    padding-left: 0;
+  }
+  .calculator .controls_wrap {
+    padding-right: 50px;
+  }
+  .calculator .calc_slide.third .tab_content_wrap .tab_content .select_part {
+    width: 350px;
+  }
+  .calculator .calc_slide.third .tab_content_wrap .tab_content .select_part .select_wrap:before {
+    width: 100px;
+    left: -100px;
+  }
+  .calculator .calc_slide.third .tab_content_wrap .tab_content .img_part {
+    margin-right: 60px;
+  }
+  .calculator .calc_slide.fourth table td,
+  .calculator .calc_slide.fourth p.offer {
+    font-size: 14px;
+  }
+  .calculator .calc_slide.fourth form input {
+    width: 175px;
+  }
+  .calculator .callback_block p.description,
+  .calculator .callback_block p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  .calculator .callback_block button {
+    width: 160px;
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+  .calculator .callback_block a>span:first-child {
+    margin-right: 0;
+  }
+  .calculator .callback_block a>span:first-child img {
+    width: 80%;
+  }
+  .calculator .callback_block a {
+    font-size: 14px;
+  }
+  .calculator .scale_block .line {
+    bottom: 55px;
+  }
+  .calculator .scale_block {
+    height: 90px;
+    width: 150px;
+  }
+  .calculator .scale_block.short {
+    width: 120px;
+  }
+  .calculator .scale_block .quad {
+    width: 28px;
+    height: 28px;
+    bottom: 42px;
+    left: 48px;
+  }
+  .calculator .scale_block.active .quad:before {
+    width: 36px;
+    height: 36px;
+    left: -5px;
+    bottom: -5px;
+  }
+  .calculator .scale_block:first-child .quad {
+    left: 78px;
+  }
+  .calculator .scale_block p {
+    font-size: 16px;
+  }
+  .calculator .calc_slide .title {
+    margin-bottom: 10px;
+  }
+  .calculator .calc_slide.first .form_wrap form table tr {
+    height: 50px;
+  }
+}
+
 
 /* =============== СЛАЙДЕР ==================== */
 
@@ -1362,6 +1766,32 @@ select:focus, select:hover {
   float: left;
 }
 
+@media all and (max-width:1320px) {
+  .portfolio .slide {
+    height: 540px;
+  }
+  .portfolio .slider_box {
+    height: 590px;
+  }
+}
+@media all and (max-width:1120px) {
+  .portfolio .slide .project .descriptionPart .title {
+    font-size: 12px;
+  }
+  .portfolio .slide .project .descriptionPart p {
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+  }
+  .portfolio .slider_box {
+    height: 450px;
+  }
+  .portfolio .slide {
+    height: 400px;
+  }
+}
+
 
 /* ============ РАБОТА С НАМИ ============== */
 
@@ -1426,6 +1856,48 @@ select:focus, select:hover {
   margin-bottom: 100px;
   margin-left: 50%;
   transform: translateX(-50%);
+}
+
+@media all and (max-width:1320px) {
+  .workProgress_block {
+    width: 230px;
+    height: 230px;
+    margin: 0 15px;
+    margin-bottom: 30px;
+  }
+  .workProgress_block .img_wrap img {
+    width: 80%;
+  }
+  .workProgress_block .img_wrap {
+    text-align: center;
+  }
+  .workProgress_block p {
+    font-size: 16px;
+  }
+  .workProgress_block:nth-child(2) p, .workProgress_block:nth-child(9) p {
+    font-size: 18px;
+  }
+  .workProgress_block .index {
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+@media all and (max-width:1120px) {
+  .workProgress_block {
+    width: 179px;
+    height: 179px;
+    margin: 0 8px;
+    margin-bottom: 15px;
+  }
+  .workProgress_block p {
+    font-size: 12px;
+    margin-top: 15px;
+  }
+  .workProgress_block:nth-child(2) p, .workProgress_block:nth-child(9) p {
+    font-size: 14px;
+  }
 }
 
 /* ============== НАШИ КЛИЕНТЫ ================= */
@@ -1542,6 +2014,36 @@ select:focus, select:hover {
   background-image: url(../img/checked.png);
 }
 
+@media all and (max-width:1320px) {
+  .action .form_box p {
+    font-size: 26px;
+  }
+}
+@media all and (max-width:1120px) {
+  .action .form_box h2 {
+    margin-top: 30px;
+  }
+  .action .form_box {
+    padding: 0 20px;
+    padding-bottom: 40px;
+  }
+  .action .form_box p {
+    font-size: 22px;
+  }
+  .action .form_box>span {
+    margin-bottom: 20px;
+  }
+  .action .form_box form .input_wrap input {
+    height: 40px;
+  }
+  .action .form_box input[type='checkbox'] + label {
+    margin-bottom: 25px;
+  }
+  footer ul li a, footer ul li {
+    font-size: 12px;
+  }
+}
+
 /* ================== КОНТАКТЫ ================ */
 
 .map {
@@ -1595,6 +2097,22 @@ select:focus, select:hover {
   color: #c9c0b9;
 }
 
+@media all and (max-width:1320px) {
+  .map .contacts_box {
+    width: 280px;
+  }
+  .map .contacts_box>div {
+    font-size: 16px;
+  }
+  .map .contacts_box h2 {
+    font-size: 28px;
+    margin-top: 60px;
+  }
+  .map iframe {
+    height: 500px;
+  }
+}
+
 
 /* ============ FOOTER ============= */
 
@@ -1627,4 +2145,14 @@ footer ul li a {
 }
 footer ul li a:hover {
   color: #fff;
+}
+
+@media all and (max-width:1320px) {
+  li>img {
+    width: 80%;
+  }
+  footer ul li a,
+  footer ul li {
+    font-size: 14px;
+  }
 }
