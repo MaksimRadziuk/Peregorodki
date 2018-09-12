@@ -1041,6 +1041,9 @@ button:focus {
 .variant .container {
   height: auto;
 }
+.variant .container>h2 {
+    margin-top: 70px;
+  }
 .mobile_variant {
   display: none;
 }
@@ -1093,7 +1096,7 @@ button:focus {
   border-radius: 50%;
   font-weight: 700;
 }
-@media all and (max-width:1320px) {
+@media all and (max-width:1380px) {
   .variant .container>h2 {
     margin-top: 50px;
   }
