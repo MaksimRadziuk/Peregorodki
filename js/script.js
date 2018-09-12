@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	$(".topbar a").click(function() {
+	$(".topbar a, .mobile_topbar a").click(function() {
       $("html, body").animate({
          scrollTop: $($(this).attr("href")).offset().top + "px"
       }, {
@@ -182,6 +182,20 @@ $('#currentProject').text(slideNumber+1);
 		$('input[name="plumbingType"]').prop('checked',false);
 		$('input[name="stationaryType"] + label').removeClass('active');
 		$('input[name="stationaryType"]').prop('checked',false);
+	});
+
+
+	$('.hamburger').click(function () {
+		$('.menu_wrap').slideToggle();
+		$(this).toggleClass('active');
+	});
+	$('.menu_wrap a').click(function () {
+		$('.menu_wrap').slideToggle();
+		$('.hamburger').toggleClass('active');
+	});
+	$('.callback_icon').click(function () {
+		$('.dropdown_phone').slideToggle();
+		$(this).toggleClass('active');
 	});
 
 
