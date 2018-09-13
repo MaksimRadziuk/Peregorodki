@@ -71,6 +71,63 @@ $('#currentProject').text(slideNumber+1);
 	});
 
 	$(window).resize(function() {
+
+		$('.slider_track').css('left', '0');
+
+		var th = $('.slide').innerHeight();
+		$('.slider_track').css('height', th);
+
+		var pl = $('#portfolioSlider').innerWidth();
+		$('.slide').css('width', pl);
+
+		var slides = $('.slide').length;
+		$('#allProjects').text(slides);
+		var trackWidth = $('.slide').innerWidth() * slides;
+		var slideNumber = $('.slide.current').index();
+		$('#currentProject').text(slideNumber+1);
+
+		$('#nextSlide').click(function () {
+			var curPos = $('.slider_track').position().left;
+			var newPos = curPos - parseInt(pl);
+			$('.slider_track').css('left', newPos);
+			var moda = Math.abs(curPos) + parseInt(pl);
+
+
+			var slideNumber = $('.slide.current').index();
+			var indexNumber = slideNumber + 1;
+			$('#currentProject').text(indexNumber+1);
+			if (moda >= trackWidth){
+				$('.slider_track').css('left', curPos);
+				$('#currentProject').text(slides);
+				$('.slide.current').addClass('current');
+			}
+			else {
+				$('.slider_track').css('left', newPos);
+				$('.slide.current').removeClass('current').next('.slide').addClass('current');
+			}
+
+
+		});
+
+		$('#previousSlide').click(function () {
+			var curPos = $('.slider_track').position().left;
+			var newPos = curPos + parseInt(pl);
+			$('.slider_track').css('left', newPos);
+
+
+			var slideNumber = $('.slide.current').index();
+			var indexNumber = slideNumber+1;
+			$('#currentProject').text(indexNumber);
+			if (newPos > 0) {
+				$('.slider_track').css('left', curPos);
+				$('#currentProject').text('1');
+				$('.slide.current').addClass('current');
+			}
+			else {
+				$('.slide.current').removeClass('current').prev('.slide').addClass('current');
+			}
+		});
+
 		$(".galleryPart").css({'minWidth': '100%', 'width':'100%', 'maxWidth':'100%'});
 		$('.ug-gallery-wrapper .ug-strip-panel').css('backgroundColor', 'transparent');
 		$('.ug-gallery-wrapper .ug-textpanel-bg').css('backgroundColor', 'transparent');
@@ -196,6 +253,40 @@ $('#currentProject').text(slideNumber+1);
 	$('.callback_icon').click(function () {
 		$('.dropdown_phone').slideToggle();
 		$(this).toggleClass('active');
+	});
+
+
+	$('.portfolio .mobile_row').click(function () {
+		$(this).next('.portfolio .dropdown_part').slideToggle();
+		$(this).children('.portfolio .mobile_row .arrow').toggleClass('active');
+	});
+
+
+// РАБОТА ПРОМОТКИ ФОТО ВАРИАНТОВ НА МОБИЛКЕ
+	$('#variantNextSlide').click(function () {
+		var slideLeftImgPos = $('.mobile_variant .img_part img').position().left;
+		var slideLeftImg = slideLeftImgPos - 80;
+		$('.mobile_variant .img_part img').css('left', slideLeftImg);
+
+		var elWidth = $('.mobile_variant .img_part img').innerWidth();
+		var windowWidth = $('.mobile_variant .img_part').innerWidth();
+		var edgePos = elWidth - windowWidth;
+		var modaSlideLeftImg = Math.abs(slideLeftImg);
+		if (edgePos <= modaSlideLeftImg){
+			$('.mobile_variant .img_part img').css('left', -edgePos);
+		}
+	});
+	$('#variantPrevSlide').click(function () {
+		var slideLeftImgPos = $('.mobile_variant .img_part img').position().left;
+		var slideLeftImg = slideLeftImgPos + 80;
+		$('.mobile_variant .img_part img').css('left', slideLeftImg);
+
+		var elWidth = $('.mobile_variant .img_part img').innerWidth();
+		var windowWidth = $('.mobile_variant .img_part').innerWidth();
+		var modaSlideLeftImg = Math.abs(slideLeftImg);
+		if (slideLeftImg >= 0){
+			$('.mobile_variant .img_part img').css('left', '0px');
+		}
 	});
 
 
