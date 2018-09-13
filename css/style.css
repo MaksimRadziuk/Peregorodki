@@ -1219,7 +1219,7 @@ button:focus {
   background-image: url('../libs/unitegallery/skins/default/slider_arrow_right.png');
   float: right;
 }
-@media all and (max-width:1320px) {
+@media all and (max-width:1500px) {
   .variant .container>h2 {
     margin-top: 50px;
   }
