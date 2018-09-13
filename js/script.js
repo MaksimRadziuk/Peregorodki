@@ -153,6 +153,27 @@ $('#currentProject').text(slideNumber+1);
 		$('.calc_slide.fourth').addClass('active');
 		$('.scale_block.third').removeClass('active');
 		$('.scale_block.fourth').addClass('purple active');
+
+		var totalMaterialPre = $('#totalLengthInput').val()*$('#totalHeight').val();	//подсчитваем площадь материалов
+		var totalMaterial = totalMaterialPre.toFixed(2);	//округляем до двух знаков площадь материалов
+		$('#totalMaterial').text(totalMaterial);			//записываем площадь материалов
+		var totalMaterialSum = totalMaterial*2000;			//подсчитываем стоимость материалов
+		$('#totalMaterialSum').text(totalMaterialSum);		//записываем сумму стоимость материалов
+		var totalDoorAmount = $('#totalDoorAmount').val();	//получаем количество дверей
+		$('.totalDoor').text(totalDoorAmount);				//записываем в итогах количество дверей
+		var totalDoorSum = totalDoorAmount*7500;			//подсчитываем стоимость всех дверей
+		$('#totalDoorSum').text(totalDoorSum);				//записываем стоимость всех дверей
+		var totalDoorInstSum = totalDoorAmount*1000;		//подсчитываем стоимость установки дверей
+		$('#totalDoorInstSum').text(totalDoorInstSum);		//записываем сумму установки дверей
+		var totalLength = $('#totalLengthInput').val();		//получаем значение длины перегородок
+		$('#totalLength').text(totalLength);				//записываем в итог длинну перегородок	
+		var totalLengthSum = totalLength*1800;				//подсчитываем сумму за монтаж перегородок
+		$('#totalLengthSum').text(totalLengthSum);			//записываем сумму за монтаж перегородок
+		var deliveryCost = 7500;							//устанавливаем стоимость доставки
+		$('#deliveryCost').text(deliveryCost);				//записывем стоимость доставки
+
+		var calculatedSum = parseInt(deliveryCost)+totalLengthSum+totalDoorInstSum+totalMaterialSum+totalDoorSum; //подсчитываем общую сумму в итогах
+		$('#calculatedSum').text(calculatedSum);			//записываем общую сумму
 	});
 
 	$('#calc_prev2').click(function() {
@@ -288,6 +309,9 @@ $('#currentProject').text(slideNumber+1);
 			$('.mobile_variant .img_part img').css('left', '0px');
 		}
 	});
+
+
+
 
 
 });
