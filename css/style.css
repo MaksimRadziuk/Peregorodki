@@ -3019,7 +3019,17 @@ h2.mobile {
 .ourClients .img_wrap img {
   width: 100%;
 }
-
+.ourClients .img_wrap img.mobileClients {
+	display: none;
+}
+@media all and (max-width: 820px) {
+	.ourClients .img_wrap img.mobileClients {
+		display: block;
+	}
+	.ourClients .img_wrap img.desctopClients {
+		display: none;
+	}
+}
 /* =============== АКЦИЯ ================= */
 
 .action {
